@@ -13,13 +13,22 @@ struct ContentView: View {
         VStack {
             VStack {
                 Text("Point 🎯 as close as you can to")
-                    .padding()
+                    .kerning(2.0)
+                    .bold()
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(4.0)
+                    .font(.footnote)
                 Text("89")
+                    .font(.largeTitle)
+                    .fontWeight(.black)
+                    .lineSpacing(-1.0)
             }
             HStack {
                 Text("1")
+                    .bold()
                 Slider(value: $sliderPosition, in: 1 ... 100)
                 Text("100")
+                    .bold()
             }
             Button(action: {}) {
                 Text("Hit me")
@@ -31,6 +40,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+
         ContentView()
             .previewLayout(.fixed(width: 568, height: 320))
     }
