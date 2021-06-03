@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var sliderPosition: Double = 50
+    @State private var alertIsVisible = false
+
     var body: some View {
         VStack {
             VStack {
@@ -30,8 +32,15 @@ struct ContentView: View {
                 Text("100")
                     .bold()
             }
-            Button(action: {}) {
+            Button(action: {
+                self.alertIsVisible = true
+            }) {
                 Text("Hit me")
+            }
+            .alert(isPresented: $alertIsVisible) {
+                Alert(title: Text("Result"),
+                      message: Text("The slider's value is \(Int(sliderPosition.rounded()))"),
+                      dismissButton: .default(Text("great!")))
             }
         }
     }
