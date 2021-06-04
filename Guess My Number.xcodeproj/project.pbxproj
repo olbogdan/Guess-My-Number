@@ -8,14 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		68BD24DB26698BF3004F2171 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD24DA26698BF3004F2171 /* Game.swift */; };
+		68BD24E3266993EF004F2171 /* Guess_My_NumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD24E2266993EF004F2171 /* Guess_My_NumberTests.swift */; };
 		68D64DD02666B259001079F9 /* Guess_My_NumberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D64DCF2666B259001079F9 /* Guess_My_NumberApp.swift */; };
 		68D64DD22666B259001079F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D64DD12666B259001079F9 /* ContentView.swift */; };
 		68D64DD42666B25C001079F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D64DD32666B25C001079F9 /* Assets.xcassets */; };
 		68D64DD72666B25C001079F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D64DD62666B25C001079F9 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		68BD24E5266993EF004F2171 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68D64DC42666B259001079F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68D64DCB2666B259001079F9;
+			remoteInfo = "Guess My Number";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		68BD24DA26698BF3004F2171 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		68BD24E0266993EE004F2171 /* Guess My NumberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Guess My NumberTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68BD24E2266993EF004F2171 /* Guess_My_NumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess_My_NumberTests.swift; sourceTree = "<group>"; };
+		68BD24E4266993EF004F2171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68D64DCC2666B259001079F9 /* Guess My Number.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guess My Number.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D64DCF2666B259001079F9 /* Guess_My_NumberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess_My_NumberApp.swift; sourceTree = "<group>"; };
 		68D64DD12666B259001079F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,6 +39,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		68BD24DD266993EE004F2171 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		68D64DC92666B259001079F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -60,10 +81,20 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		68BD24E1266993EF004F2171 /* Guess My NumberTests */ = {
+			isa = PBXGroup;
+			children = (
+				68BD24E2266993EF004F2171 /* Guess_My_NumberTests.swift */,
+				68BD24E4266993EF004F2171 /* Info.plist */,
+			);
+			path = "Guess My NumberTests";
+			sourceTree = "<group>";
+		};
 		68D64DC32666B259001079F9 = {
 			isa = PBXGroup;
 			children = (
 				68D64DCE2666B259001079F9 /* Guess My Number */,
+				68BD24E1266993EF004F2171 /* Guess My NumberTests */,
 				68D64DCD2666B259001079F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				68D64DCC2666B259001079F9 /* Guess My Number.app */,
+				68BD24E0266993EE004F2171 /* Guess My NumberTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +131,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		68BD24DF266993EE004F2171 /* Guess My NumberTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68BD24E7266993EF004F2171 /* Build configuration list for PBXNativeTarget "Guess My NumberTests" */;
+			buildPhases = (
+				68BD24DC266993EE004F2171 /* Sources */,
+				68BD24DD266993EE004F2171 /* Frameworks */,
+				68BD24DE266993EE004F2171 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68BD24E6266993EF004F2171 /* PBXTargetDependency */,
+			);
+			name = "Guess My NumberTests";
+			productName = "Guess My NumberTests";
+			productReference = 68BD24E0266993EE004F2171 /* Guess My NumberTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		68D64DCB2666B259001079F9 /* Guess My Number */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68D64DDB2666B25C001079F9 /* Build configuration list for PBXNativeTarget "Guess My Number" */;
@@ -125,6 +175,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					68BD24DF266993EE004F2171 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 68D64DCB2666B259001079F9;
+					};
 					68D64DCB2666B259001079F9 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -144,11 +198,19 @@
 			projectRoot = "";
 			targets = (
 				68D64DCB2666B259001079F9 /* Guess My Number */,
+				68BD24DF266993EE004F2171 /* Guess My NumberTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		68BD24DE266993EE004F2171 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		68D64DCA2666B259001079F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,6 +223,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		68BD24DC266993EE004F2171 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68BD24E3266993EF004F2171 /* Guess_My_NumberTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		68D64DC82666B259001079F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,7 +243,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		68BD24E6266993EF004F2171 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68D64DCB2666B259001079F9 /* Guess My Number */;
+			targetProxy = 68BD24E5266993EF004F2171 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		68BD24E8266993EF004F2171 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4U2DW67G88;
+				INFOPLIST_FILE = "Guess My NumberTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bogdanov.guessnumber.Guess-My-NumberTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Guess My Number.app/Guess My Number";
+			};
+			name = Debug;
+		};
+		68BD24E9266993EF004F2171 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4U2DW67G88;
+				INFOPLIST_FILE = "Guess My NumberTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bogdanov.guessnumber.Guess-My-NumberTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Guess My Number.app/Guess My Number";
+			};
+			name = Release;
+		};
 		68D64DD92666B25C001079F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -337,6 +455,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		68BD24E7266993EF004F2171 /* Build configuration list for PBXNativeTarget "Guess My NumberTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68BD24E8266993EF004F2171 /* Debug */,
+				68BD24E9266993EF004F2171 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		68D64DC72666B259001079F9 /* Build configuration list for PBXProject "Guess My Number" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
