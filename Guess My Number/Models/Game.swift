@@ -7,13 +7,21 @@
 
 import Foundation
 
+private let maxValue = 100
+
 struct Game {
-    var target = Int.random(in: 1 ..< 100)
+    var target = Int.random(in: 1 ..< maxValue)
 
     var score: Int = 0
     var round: Int = 1
 
     func points(sliderValue: Int) -> Int {
-        return 999
+        var difference = 0
+        if target > sliderValue {
+            difference = target - sliderValue
+        } else if sliderValue > target {
+            difference = sliderValue - target
+        }
+        return maxValue - difference
     }
 }
