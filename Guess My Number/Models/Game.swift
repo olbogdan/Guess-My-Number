@@ -16,12 +16,6 @@ struct Game {
     var round: Int = 1
 
     func points(sliderValue: Int) -> Int {
-        var difference = 0
-        if target > sliderValue {
-            difference = target - sliderValue
-        } else if sliderValue > target {
-            difference = sliderValue - target
-        }
-        return maxValue - difference
+        maxValue - abs(target - sliderValue)
     }
 }
