@@ -12,8 +12,8 @@ private let maxValue = 100
 struct Game {
     var target = Int.random(in: 1 ..< maxValue)
 
-    var score: Int = 0
-    var round: Int = 1
+    var score = 0
+    var round = 1
 
     func points(sliderValue: Int) -> Int {
         maxValue - abs(target - sliderValue)

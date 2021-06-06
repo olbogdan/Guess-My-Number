@@ -34,7 +34,7 @@ struct ContentView: View {
                     .bold()
             }
             Button(action: {
-                self.alertIsVisible = true
+                alertIsVisible = true
             }) {
                 Text("Hit me")
             }
@@ -43,7 +43,7 @@ struct ContentView: View {
                 return Alert(title: Text("Result"),
                       message: Text(
                         "The slider's value is \(roundedValue)\n"
-                            + "You scored \(self.game.points(sliderValue: roundedValue)) points this round."
+                            + "You scored \(game.points(sliderValue: roundedValue)) points this round."
                       ),
                       dismissButton: .default(Text("great!")))
             }
