@@ -85,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				68D64DCF2666B259001079F9 /* GuessMyNumberApp.swift */,
+				68D64DD32666B25C001079F9 /* Assets.xcassets */,
 				68D64DD82666B25C001079F9 /* Info.plist */,
 			);
 			path = App;
@@ -114,7 +115,6 @@
 				68BD24D926698B53004F2171 /* App */,
 				68BD24D826698B49004F2171 /* Models */,
 				68BD24D726698B12004F2171 /* Views */,
-				68D64DD32666B25C001079F9 /* Assets.xcassets */,
 				68D64DD52666B25C001079F9 /* Preview Content */,
 			);
 			path = GuessMyNumber;
