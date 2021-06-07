@@ -65,6 +65,10 @@ struct HitMeButton: View {
                 .textCase(.uppercase)
         }
         .padding()
+        .overlay(
+            RoundedRectangle(cornerRadius: 21.0)
+                .strokeBorder(Color.white, lineWidth: 2)
+        )
         .background(
             ZStack {
                 Color("ButtonColor")
