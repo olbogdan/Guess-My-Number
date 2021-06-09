@@ -10,6 +10,7 @@
 		68152447266D3484009608E1 /* GuessMyNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68152446266D3484009608E1 /* GuessMyNumberTests.swift */; };
 		6815244F266ED17F009608E1 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815244E266ED17F009608E1 /* TextViews.swift */; };
 		686CDAC42670312500128183 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686CDAC32670312400128183 /* RoundedImageView.swift */; };
+		686CDAC6267171E100128183 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686CDAC5267171E100128183 /* BackgroundView.swift */; };
 		68BD24DB26698BF3004F2171 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BD24DA26698BF3004F2171 /* Game.swift */; };
 		68D64DD02666B259001079F9 /* GuessMyNumberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D64DCF2666B259001079F9 /* GuessMyNumberApp.swift */; };
 		68D64DD22666B259001079F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D64DD12666B259001079F9 /* ContentView.swift */; };
@@ -33,6 +34,7 @@
 		68152448266D3484009608E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6815244E266ED17F009608E1 /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
 		686CDAC32670312400128183 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		686CDAC5267171E100128183 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		68BD24DA26698BF3004F2171 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		68D64DCC2666B259001079F9 /* GuessMyNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessMyNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D64DCF2666B259001079F9 /* GuessMyNumberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessMyNumberApp.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				68D64DD12666B259001079F9 /* ContentView.swift */,
 				6815244E266ED17F009608E1 /* TextViews.swift */,
 				686CDAC32670312400128183 /* RoundedImageView.swift */,
+				686CDAC5267171E100128183 /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				686CDAC6267171E100128183 /* BackgroundView.swift in Sources */,
 				686CDAC42670312500128183 /* RoundedImageView.swift in Sources */,
 				68D64DD22666B259001079F9 /* ContentView.swift in Sources */,
 				6815244F266ED17F009608E1 /* TextViews.swift in Sources */,
