@@ -15,7 +15,6 @@ struct InstructionText: View {
             .kerning(2.0)
             .bold()
             .multilineTextAlignment(.center)
-            .lineSpacing(4.0)
             .font(.footnote)
     }
 }
@@ -30,7 +29,6 @@ struct BigText: View {
             .kerning(-1.0)
     }
 }
-
 
 struct SliderLabel: View {
     var text: String
