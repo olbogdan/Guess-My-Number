@@ -8,12 +8,27 @@
 import Foundation
 
 private let maxValue = 100
+private var randomTarget: Int {
+    Int.random(in: 1 ..< maxValue)
+}
 
 struct Game {
-    var target = Int.random(in: 1 ..< maxValue)
+    var target = randomTarget
 
     var score = 0
     var round = 1
+
+    mutating func startNewRound(points: Int) {
+        score += points
+        round += 1
+        target = randomTarget
+    }
+
+    mutating func restart() {
+        score = 0
+        round = 1
+        target = randomTarget
+    }
 
     func points(sliderValue: Int) -> Int {
         maxValue - rowPointsDiff(sliderValue) + getBonusPoints(sliderValue)
@@ -33,11 +48,5 @@ struct Game {
 
     private func rowPointsDiff(_ sliderValue: Int) -> Int {
         abs(target - sliderValue)
-    }
-
-    mutating func startNewRound(points: Int) {
-        score += points
-        round += 1
-        target = Int.random(in: 1 ..< maxValue)
     }
 }
