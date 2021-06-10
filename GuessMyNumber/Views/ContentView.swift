@@ -18,14 +18,15 @@ struct ContentView: View {
             VStack {
                 InstructionText(text: "Point 🎯 as close as you can to")
                 BigText(text: String(game.target))
-                SliderView(sliderPosition: $sliderPosition)
                 HitMeButton(alertIsVisible: $alertIsVisible)
                     .alert(isPresented: $alertIsVisible) {
                         resultAlert()
                     }
+                    .padding(.top, 100)
             }
             .padding()
             .foregroundColor(Color("TextColor"))
+            SliderView(sliderPosition: $sliderPosition)
         }
     }
 
