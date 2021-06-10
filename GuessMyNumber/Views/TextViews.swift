@@ -71,6 +71,34 @@ struct RoundedRectTextView: View {
     }
 }
 
+struct BodyText: View {
+    var text: String
+
+    var body: some View {
+        Text(text)
+            .foregroundColor(Color("TextColor"))
+            .font(.subheadline)
+            .fontWeight(.semibold)
+            .multilineTextAlignment(.center)
+            .lineSpacing(11.0)
+    }
+}
+
+struct ButtonText: View {
+    var text: String
+
+    var body: some View {
+        Text(text)
+            .bold()
+            .frame(maxWidth: .infinity)
+            .padding()
+            .background(Color.accentColor)
+            .foregroundColor(.white)
+            .font(.body)
+            .cornerRadius(12.0)
+    }
+}
+
 struct TextViews_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
@@ -79,7 +107,9 @@ struct TextViews_Previews: PreviewProvider {
             SliderLabel(text: "11")
             LabelText(text: "text")
             RoundedRectTextView(text: "999")
-        }.previewLayout(.fixed(width: 200, height: 200))
+            BodyText(text: "You scored 200 points! \n 🥁🏆🎯")
+            ButtonText(text: "Start new round")
+        }.previewLayout(.fixed(width: 200, height: 300))
 
         VStack {
             InstructionText(text: "title")
@@ -87,7 +117,9 @@ struct TextViews_Previews: PreviewProvider {
             SliderLabel(text: "11")
             LabelText(text: "text")
             RoundedRectTextView(text: "999")
-        }.previewLayout(.fixed(width: 200, height: 200))
+            BodyText(text: "You scored 200 points! \n 🥁🏆🎯")
+            ButtonText(text: "Start new round")
+        }.previewLayout(.fixed(width: 200, height: 300))
             .preferredColorScheme(.dark)
     }
 }
