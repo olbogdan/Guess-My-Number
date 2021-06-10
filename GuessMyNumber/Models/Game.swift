@@ -18,4 +18,10 @@ struct Game {
     func points(sliderValue: Int) -> Int {
         maxValue - abs(target - sliderValue)
     }
+
+    mutating func startNewRound(points: Int) {
+        score += points
+        round += 1
+        target = Int.random(in: 1 ..< maxValue)
+    }
 }

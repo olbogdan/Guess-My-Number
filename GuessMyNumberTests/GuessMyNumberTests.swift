@@ -20,9 +20,9 @@ class GuessMyNumberTests: XCTestCase {
     override func tearDownWithError() throws {
         game = nil
     }
-    
-    func testScorePositive()  {
-        let guess  = game.target  +  5
+
+    func testScorePositive() {
+        let guess = game.target + 5
         let score = game.points(sliderValue: guess)
         XCTAssertEqual(score, 95)
     }
@@ -31,5 +31,15 @@ class GuessMyNumberTests: XCTestCase {
         let guess = game.target - 5
         let score = game.points(sliderValue: guess)
         XCTAssertEqual(score, 95)
+    }
+
+    func testNewRound() {
+        game.startNewRound(points: 100)
+        XCTAssertEqual(game.score, 100)
+        XCTAssertEqual(game.round, 2)
+        
+        game.startNewRound(points: 50)
+        XCTAssertEqual(game.score, 150)
+        XCTAssertEqual(game.round, 3)
     }
 }

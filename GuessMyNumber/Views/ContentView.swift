@@ -31,12 +31,15 @@ struct ContentView: View {
 
     private func resultAlert() -> Alert {
         let roundedValue = Int(sliderPosition.rounded())
+        let points = game.points(sliderValue: roundedValue)
         return Alert(title: Text("Result"),
                      message: Text(
                          "The slider's value is \(roundedValue)\n"
-                             + "You scored \(game.points(sliderValue: roundedValue)) points this round."
+                             + "You scored \(points) points this round."
                      ),
-                     dismissButton: .default(Text("great!")))
+                     dismissButton: .default(Text("great!")) {
+                         game.startNewRound(points: points)
+                     })
     }
 }
 
