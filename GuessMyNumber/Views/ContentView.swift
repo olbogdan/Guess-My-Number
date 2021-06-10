@@ -58,6 +58,7 @@ struct HitMeButton: View {
     @Binding var alertIsVisible: Bool
 
     var body: some View {
+        let cornerRadius: CGFloat = 21.0
         Button(action: {
             alertIsVisible = true
         }) {
@@ -68,7 +69,7 @@ struct HitMeButton: View {
         }
         .padding()
         .overlay(
-            RoundedRectangle(cornerRadius: 21.0)
+            RoundedRectangle(cornerRadius: cornerRadius)
                 .strokeBorder(Color.white, lineWidth: 2)
         )
         .background(
@@ -78,7 +79,7 @@ struct HitMeButton: View {
             }
         )
         .foregroundColor(.white)
-        .cornerRadius(16.0)
+        .cornerRadius(cornerRadius)
     }
 }
 
