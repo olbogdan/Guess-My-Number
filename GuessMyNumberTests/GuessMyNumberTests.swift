@@ -37,9 +37,21 @@ class GuessMyNumberTests: XCTestCase {
         game.startNewRound(points: 100)
         XCTAssertEqual(game.score, 100)
         XCTAssertEqual(game.round, 2)
-        
+
         game.startNewRound(points: 50)
         XCTAssertEqual(game.score, 150)
         XCTAssertEqual(game.round, 3)
+    }
+
+    func testScoreExact() {
+        let guess = game.target
+        let score = game.points(sliderValue: guess)
+        XCTAssertEqual(score, 200)
+    }
+
+    func testScoreClose() {
+        let guess = game.target + 2
+        let score = game.points(sliderValue: guess)
+        XCTAssertEqual(score, 98 + 50)
     }
 }
