@@ -36,6 +36,7 @@ struct SliderLabel: View {
     var body: some View {
         Text(text)
             .bold()
+            .frame(width: 35)
     }
 }
 
@@ -57,6 +58,8 @@ struct RoundedRectTextView: View {
 
     var body: some View {
         Text(text)
+            .kerning(-0.2)
+            .bold()
             .font(.title)
             .frame(minWidth: 68, minHeight: 55)
             .foregroundColor(Color("TextColor"))
