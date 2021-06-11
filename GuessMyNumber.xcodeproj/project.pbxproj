@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		68152447266D3484009608E1 /* GuessMyNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68152446266D3484009608E1 /* GuessMyNumberTests.swift */; };
 		6815244F266ED17F009608E1 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6815244E266ED17F009608E1 /* TextViews.swift */; };
+		682B1DAE2674206C0095A89F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682B1DAD2674206C0095A89F /* Constants.swift */; };
 		686CDAC42670312500128183 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686CDAC32670312400128183 /* RoundedImageView.swift */; };
 		686CDAC6267171E100128183 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686CDAC5267171E100128183 /* BackgroundView.swift */; };
 		686CDACC2672859D00128183 /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686CDACB2672859D00128183 /* PointsView.swift */; };
@@ -34,6 +35,7 @@
 		68152446266D3484009608E1 /* GuessMyNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessMyNumberTests.swift; sourceTree = "<group>"; };
 		68152448266D3484009608E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6815244E266ED17F009608E1 /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		682B1DAD2674206C0095A89F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		686CDAC32670312400128183 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		686CDAC5267171E100128183 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		686CDACB2672859D00128183 /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		68BD24D826698B49004F2171 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				682B1DAD2674206C0095A89F /* Constants.swift */,
 				68BD24DA26698BF3004F2171 /* Game.swift */,
 			);
 			path = Models;
@@ -250,6 +253,7 @@
 				686CDAC6267171E100128183 /* BackgroundView.swift in Sources */,
 				686CDAC42670312500128183 /* RoundedImageView.swift in Sources */,
 				68D64DD22666B259001079F9 /* ContentView.swift in Sources */,
+				682B1DAE2674206C0095A89F /* Constants.swift in Sources */,
 				6815244F266ED17F009608E1 /* TextViews.swift in Sources */,
 				686CDACC2672859D00128183 /* PointsView.swift in Sources */,
 				68BD24DB26698BF3004F2171 /* Game.swift in Sources */,

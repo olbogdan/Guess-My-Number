@@ -61,7 +61,7 @@ struct RoundedRectTextView: View {
             .kerning(-0.2)
             .bold()
             .font(.title)
-            .frame(minWidth: 68, minHeight: 55)
+            .frame(minWidth: Constants.General.roundedRectViewWidth, minHeight: 55)
             .foregroundColor(Color("TextColor"))
             .background(
                 RoundedRectangle(cornerRadius: 21)

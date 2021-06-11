@@ -52,7 +52,7 @@ struct HitMeButton: View {
     @Binding var alertIsVisible: Bool
 
     var body: some View {
-        let cornerRadius: CGFloat = 21.0
+        let cornerRadius: CGFloat = Constants.General.roundedRectCornerRadius
         Button(action: {
             withAnimation {
                 alertIsVisible = true
