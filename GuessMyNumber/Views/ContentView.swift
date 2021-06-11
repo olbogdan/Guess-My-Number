@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var sliderPosition: Double = 50
+    @State private var sliderValue: Double = 50
     @State private var alertIsVisible = false
     @State private var game = Game()
 
@@ -19,28 +19,16 @@ struct ContentView: View {
                 InstructionText(text: "Point 🎯 as close as you can to")
                 BigText(text: String(game.target))
                 HitMeButton(alertIsVisible: $alertIsVisible)
-                    .alert(isPresented: $alertIsVisible) {
-                        resultAlert()
-                    }
                     .padding(.top, 100)
             }
             .padding()
             .foregroundColor(Color("TextColor"))
-            SliderView(sliderPosition: $sliderPosition)
+            SliderView(sliderPosition: $sliderValue)
+            if alertIsVisible {
+                PointsView(alertIsVisible: $alertIsVisible, sliderValue: $sliderValue, game: $game)
+                    .padding(.top, 100)
+            }
         }
-    }
-
-    private func resultAlert() -> Alert {
-        let roundedValue = Int(sliderPosition.rounded())
-        let points = game.points(sliderValue: roundedValue)
-        return Alert(title: Text("Result"),
-                     message: Text(
-                         "The slider's value is \(roundedValue)\n"
-                             + "You scored \(points) points this round."
-                     ),
-                     dismissButton: .default(Text("great!")) {
-                         game.startNewRound(points: points)
-                     })
     }
 }
 
