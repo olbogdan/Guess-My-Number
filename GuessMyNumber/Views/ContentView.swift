@@ -18,15 +18,20 @@ struct ContentView: View {
             VStack {
                 InstructionText(text: "Point 🎯 as close as you can to")
                 BigText(text: String(game.target))
-                HitMeButton(alertIsVisible: $alertIsVisible)
-                    .padding(.top, 100)
+
+                if alertIsVisible {
+                    PointsView(alertIsVisible: $alertIsVisible, sliderValue: $sliderValue, game: $game)
+                } else {
+                    HitMeButton(alertIsVisible: $alertIsVisible)
+                        .padding(.top, 100)
+                        .transition(.scale)
+                }
             }
             .padding()
             .foregroundColor(Color("TextColor"))
-            SliderView(sliderPosition: $sliderValue)
-            if alertIsVisible {
-                PointsView(alertIsVisible: $alertIsVisible, sliderValue: $sliderValue, game: $game)
-                    .padding(.top, 100)
+            if !alertIsVisible {
+                SliderView(sliderPosition: $sliderValue)
+                    .transition(.scale)
             }
         }
     }
@@ -49,7 +54,9 @@ struct HitMeButton: View {
     var body: some View {
         let cornerRadius: CGFloat = 21.0
         Button(action: {
-            alertIsVisible = true
+            withAnimation {
+                alertIsVisible = true
+            }
         }) {
             Text("Hit me")
                 .bold()
