@@ -9,7 +9,14 @@ import SwiftUI
 
 struct LeaderboardView: View {
     var body: some View {
-        RowView(index: 1, score: 132, data: Date())
+        ZStack {
+            Color("BackgroundColor").ignoresSafeArea(.all)
+            VStack(spacing: 10) {
+                HeaderView()
+                LabelView()
+                RowView(index: 1, score: 132, data: Date())
+            }
+        }
     }
 }
 
@@ -36,11 +43,43 @@ struct RowView: View {
     }
 }
 
+struct HeaderView: View {
+    var body: some View {
+        ZStack {
+            BigBoldText(text: "Leaderboard")
+            HStack {
+                Spacer()
+                Button(action: {}) {
+                    RoundedImageViewFilled(systemName: "xmark")
+                        .padding()
+                }
+            }
+        }
+    }
+}
+
+struct LabelView: View {
+    var body: some View {
+        HStack {
+            Spacer()
+                .frame(width: Constants.General.roundedViewLength)
+            Spacer()
+            LabelText(text: "Score")
+                .frame(width: Constants.Leaderboard.leaderboardScoreColWidth)
+            Spacer()
+            LabelText(text: "Date")
+                .frame(width: Constants.Leaderboard.leaderboardDateColWidth)
+        }
+        .padding(.horizontal)
+        .frame(maxWidth: Constants.Leaderboard.leaderboardMaxRowWidth)
+    }
+}
+
 struct LeaderboardView_Previews: PreviewProvider {
     static var previews: some View {
         LeaderboardView()
         LeaderboardView()
-            .previewLayout(.fixed(width: 450, height: 100))
+            .previewLayout(.fixed(width: 450, height: 300))
             .preferredColorScheme(.dark)
     }
 }

@@ -138,6 +138,19 @@ struct DateText: View {
     }
 }
 
+struct BigBoldText: View {
+    var text: String
+
+    var body: some View {
+        Text(text)
+            .kerning(2)
+            .foregroundColor(Color("TextColor"))
+            .font(.title)
+            .fontWeight(.black)
+            .textCase(.uppercase)
+    }
+}
+
 struct TextViews_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
@@ -150,8 +163,11 @@ struct TextViews_Previews: PreviewProvider {
             ButtonText(text: "Start new round")
             RoundedTextView(text: "22")
             ScoreText(score: 11)
-            DateText(date: Date())
-        }.previewLayout(.fixed(width: 200, height: 400))
+            VStack {
+                DateText(date: Date())
+                BigBoldText(text: "Leaderboard")
+            }
+        }.previewLayout(.fixed(width: 300, height: 400))
 
         VStack {
             InstructionText(text: "title")
@@ -163,8 +179,11 @@ struct TextViews_Previews: PreviewProvider {
             ButtonText(text: "Start new round")
             RoundedTextView(text: "22")
             ScoreText(score: 11)
-            DateText(date: Date())
-        }.previewLayout(.fixed(width: 200, height: 400))
+            VStack {
+                DateText(date: Date())
+                BigBoldText(text: "Leaderboard")
+            }
+        }.previewLayout(.fixed(width: 300, height: 400))
             .preferredColorScheme(.dark)
     }
 }
