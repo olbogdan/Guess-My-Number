@@ -17,11 +17,20 @@ struct Game {
 
     var score = 0
     var round = 1
+    var leaderboardEntries: [LeaderboardEntry] = []
 
     mutating func startNewRound(points: Int) {
         score += points
         round += 1
         target = randomTarget
+
+        addToLeaderboard(points)
+    }
+
+    private mutating func addToLeaderboard(_ points: Int) {
+        let leaderboardEntry = LeaderboardEntry(score: points, date: Date())
+        leaderboardEntries.append(leaderboardEntry)
+        leaderboardEntries.sort { $0.date > $1.date }
     }
 
     mutating func restart() {
@@ -49,4 +58,9 @@ struct Game {
     private func rowPointsDiff(_ sliderValue: Int) -> Int {
         abs(target - sliderValue)
     }
+}
+
+struct LeaderboardEntry {
+    let score: Int
+    let date: Date
 }
