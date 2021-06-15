@@ -19,6 +19,24 @@ struct Game {
     var round = 1
     var leaderboardEntries: [LeaderboardEntry] = []
 
+    init(loadTestDate: Bool = false) {
+        if loadTestDate {
+            leaderboardEntries.append(LeaderboardEntry(score: 100, date: Date()))
+            leaderboardEntries.append(LeaderboardEntry(score: 32, date: Date()))
+            leaderboardEntries.append(LeaderboardEntry(score: 44, date: Date()))
+            leaderboardEntries.append(LeaderboardEntry(score: 434, date: Date()))
+            leaderboardEntries.append(LeaderboardEntry(score: 33, date: Date()))
+            leaderboardEntries.append(LeaderboardEntry(score: 21, date: Date()))
+            leaderboardEntries.append(LeaderboardEntry(score: 5, date: Date()))
+            leaderboardEntries.append(LeaderboardEntry(score: 78, date: Date()))
+            leaderboardEntries.append(LeaderboardEntry(score: 88, date: Date()))
+            leaderboardEntries.append(LeaderboardEntry(score: 99, date: Date()))
+            leaderboardEntries.append(LeaderboardEntry(score: 2, date: Date()))
+            leaderboardEntries.append(LeaderboardEntry(score: 354, date: Date()))
+            leaderboardEntries.append(LeaderboardEntry(score: 49, date: Date()))
+        }
+    }
+
     mutating func startNewRound(points: Int) {
         score += points
         round += 1
